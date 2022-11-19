@@ -1,0 +1,335 @@
+<html>
+  <head>
+    <title>Paint application in electron</title>
+  </head>
+  <body>
+
+
+    <button id="upimage">Upload image</button>
+    <button id="downimage">Download Image</button>
+    <button id="undo">undo</button>
+    <button id="invert">Invert Image</button>
+    <button id="contrast">Contrast</button>
+    <button id="brightness">Brightness</button>
+    <button id="saturation">saturation</button>
+    <button id="deepfry">deepfry</button>
+
+    <div id="canvas"></div>
+
+    
+    <script>
+      //Create a canvas element
+      var canvas = document.createElement("canvas");
+      //Set the canvas width and height
+      canvas.width = 500;
+      canvas.height = 500;
+      //Set the canvas background color
+      canvas.style.backgroundColor = "white";
+      //Set the canvas border
+      canvas.style.border = "1px solid black";
+      //Append the canvas to the div
+      document.getElementById("canvas").appendChild(canvas);
+      //Create a context variable
+      var ctx = canvas.getContext("2d");
+      //Create a variable to store the image
+      var img = new Image();
+      //Create a variable to store the image data
+      var imgData;
+      //Create a variable to store the image data
+      var imgData2;
+      //Create a variable to store the image data
+      var imgData3;
+      //Create a variable to store the image data
+      var imgData4;
+      //Create a variable to store the image data
+      var imgData5;
+      //Create a variable to store the image data
+      var imgData6;
+      //Create a variable to store the image data
+      var imgData7;
+      //Create a variable to store the image data
+      var imgData8;
+      //Create a variable to store the image data
+      var imgData9;
+      //Create a variable to store the image data
+      var imgData10;
+      //Create a variable to store the image data
+      var imgData11;
+      //Create a variable to store the image data
+      var imgData12;
+      //Create a variable to store the image data
+      var imgData13;
+      //Create a variable to store the image data
+      var imgData14;
+      //Create a variable to store the image data
+      var imgData15;
+      //Create a variable to store the image data
+      var imgData16;
+      //Create a variable to store the image data
+      var imgData17;
+      //Create a variable to store the image data
+      var imgData18;
+      //Create a variable to store the image data
+      var imgData19;
+      //Create a variable to store the image data
+      var imgData20;
+      //Create a variable to store the image data
+      var imgData21;
+      //Create a variable to store the image data
+      var imgData22;
+
+
+        //Create a function to upload an image
+
+        function uploadImage() {
+          //Create a file input element
+          var fileInput = document.createElement("input");
+          //Set the file input type to file
+          fileInput.type = "file";
+          //Set the file input accept attribute to image
+          fileInput.accept = "image/*";
+          //Add a change event listener to the file input
+          fileInput.addEventListener("change", function() {
+            //Create a file reader
+            var reader = new FileReader();
+            //Add a load event listener to the file reader
+            reader.addEventListener("load", function() {
+              //Set the image source to the file reader result
+              img.src = reader.result;
+              //Add a load event listener to the image
+              img.addEventListener("load", function() {
+                //Draw the image on the canvas
+                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                //Get the image data
+                imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                //Get the image data
+                imgData2 = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                //Get the image data
+                imgData3 = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                //Get the image data
+                imgData4 = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                //Get the image data
+                imgData5 = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                //Get the image data
+                imgData6 = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                //Get the image data
+                imgData7 = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                //Get the image data
+                imgData8 = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                //Get the image data
+                imgData9 = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                //Get the image data
+                imgData10 = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                //Get the image data
+                imgData11 = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                //Get the image data
+                imgData12 = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                //Get the image data
+
+              });   
+            });
+            //Read the file input as a data URL
+            reader.readAsDataURL(fileInput.files[0]);
+            });
+            //Dispatch a click event to the file input
+            fileInput.dispatchEvent(new MouseEvent("click"));
+            }
+
+            //Add a click event listener to the upload image button
+            document.getElementById("upimage").addEventListener("click", uploadImage);
+
+            //Create a function to draw on the canvas
+            function draw(e) {
+              //Get the mouse position
+              var mousePos = getMousePos(canvas, e);
+              //Get the mouse x position
+              var x = mousePos.x;
+              //Get the mouse y position
+              var y = mousePos.y;
+              //Set the fill style to red
+              ctx.fillStyle = "red";
+              //Draw a circle
+              ctx.beginPath();
+              ctx.arc(x, y, 10, 0, 2 * Math.PI);
+              ctx.fill();
+              ctx.closePath();
+              //Get the image data
+              imgData2 = ctx.getImageData(0, 0, canvas.width, canvas.height);
+              //Get the image data
+              imgData3 = ctx.getImageData(0, 0, canvas.width, canvas.height);
+              //Get the image data
+              imgData4 = ctx.getImageData(0, 0, canvas.width, canvas.height);
+              //Get the image data
+              imgData5 = ctx.getImageData(0, 0, canvas.width, canvas.height);
+              //Get the image data
+              imgData6 = ctx.getImageData(0, 0, canvas.width, canvas.height);
+              //Get the image data
+              imgData7 = ctx.getImageData(0, 0, canvas.width, canvas.height);
+              //Get the image data
+              imgData8 = ctx.getImageData(0, 0, canvas.width, canvas.height);
+              //Get the image data
+              imgData9 = ctx.getImageData(0, 0, canvas.width, canvas.height);
+              //Get the image data
+              imgData10 = ctx.getImageData(0, 0, canvas.width, canvas.height);
+              //Get the image data
+              imgData11 = ctx.getImageData(0, 0, canvas.width, canvas.height);
+              //Get the image data
+              imgData12 = ctx.getImageData(0, 0, canvas.width, canvas.height);
+              
+            }
+
+            //Add a mouse down event listener to the canvas
+            canvas.addEventListener("mousedown", draw);
+
+            //Create a function to get the mouse position
+            function getMousePos(canvas, e) {
+              //Get the canvas rectangle
+              var rect = canvas.getBoundingClientRect();
+              //Return the mouse position
+              return {
+                x: e.clientX - rect.left,
+                y: e.clientY - rect.top
+              };
+            }
+
+            //add an option to download the edited image and save it to a folder
+            function downloadImage() {
+              //Get the image data
+              imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+              //Create a file input element
+              var fileInput = document.createElement("input");
+              //Set the file input type to file
+              fileInput.type = "file";
+              //Set the file input accept attribute to image
+              fileInput.accept = "image/*";
+              //Add a change event listener to the file input
+              fileInput.addEventListener("change", function() {
+                //Create a file reader
+                var reader = new FileReader();
+                //Add a load event listener to the file reader
+                reader.addEventListener("load", function() {
+                  //Set the image source to the file reader result
+                  img.src = reader.result;
+                  //Add a load event listener to the image
+                  img.addEventListener("load", function() {
+                    //Draw the image on the canvas
+                    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                    //Get the image data
+                    imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                    //Get the image data
+                    imgData2 = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                    //Get the image data
+                    imgData3 = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                    //Get the image data
+                    imgData4 = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                    //Get the image data
+                    imgData5 = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                    //Get the image data
+                    imgData6 = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                    //Get the image data
+                    imgData7 = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                    //Get the image data
+                    imgData8 = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                    //Get the image data
+                    imgData9 = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                    //Get the image data
+                    imgData10 = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                    //Get the image data
+                    imgData11 = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                    //Get the image data
+                    imgData12 = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                  
+                  });
+                });
+                //Read the file input as a data URL
+                reader.readAsDataURL(fileInput.files[0]);
+              });
+              //Dispatch a click event to the file input
+              fileInput.dispatchEvent(new MouseEvent("click"));
+            }
+
+            //Add a click event listener to the download image button
+            document.getElementById("downimage").addEventListener("click", downloadImage);
+
+            //Create a function to undo the last action
+            function undo() {
+              //Set the image data
+              ctx.putImageData(imgData, 0, 0);
+              //Set the image data
+              ctx.putImageData(imgData2, 0, 0);
+              //Set the image data
+              ctx.putImageData(imgData3, 0, 0);
+              //Set the image data
+              ctx.putImageData(imgData4, 0, 0);
+              //Set the image data
+              ctx.putImageData(imgData5, 0, 0);
+              //Set the image data
+              ctx.putImageData(imgData6, 0, 0);
+              //Set the image data
+              ctx.putImageData(imgData7, 0, 0);
+              //Set the image data
+              ctx.putImageData(imgData8, 0, 0);
+              //Set the image data
+              ctx.putImageData(imgData9, 0, 0);
+              //Set the image data
+              ctx.putImageData(imgData10, 0, 0);
+              //Set the image data
+              ctx.putImageData(imgData11, 0, 0);
+              //Set the image data
+              ctx.putImageData(imgData12, 0, 0);
+            }
+
+            //Add a click event listener to the undo button
+            document.getElementById("undo").addEventListener("click", undo);
+
+
+
+            //add an option to invert the image colours
+            function invert() {
+              //Loop through the image data
+              for (var i = 0; i < imgData.data.length; i += 4) {
+                //Invert the red colour
+                imgData.data[i] = 255 - imgData.data[i];
+                //Invert the green colour
+                imgData.data[i + 1] = 255 - imgData.data[i + 1];
+                //Invert the blue colour
+                imgData.data[i + 2] = 255 - imgData.data[i + 2];
+              }
+              //Draw the image data on the canvas
+              ctx.putImageData(imgData, 0, 0);
+            }
+            //Add a click event listener to the invert button
+            document.getElementById("invert").addEventListener("click", invert);
+
+            //use the javascript library jimp to add contrast to the image
+            function contrast() {
+              //Loop through the image data
+              for (var i = 0; i < imgData.data.length; i += 4) {
+                //Get the red colour
+                var r = imgData.data[i];
+                //Get the green colour
+                var g = imgData.data[i + 1];
+                //Get the blue colour
+                var b = imgData.data[i + 2];
+                //Get the average colour
+                var avg = (r + g + b) / 3;
+                //Set the red colour
+                imgData.data[i] = avg + 100;
+                //Set the green colour
+                imgData.data[i + 1] = avg + 100;
+                //Set the blue colour
+                imgData.data[i + 2] = avg + 100;
+              }
+              //Draw the image data on the canvas
+              ctx.putImageData(imgData, 0, 0);
+            }
+            //Add a click event listener to the contrast button
+            document.getElementById("contrast").addEventListener("click", contrast);
+            
+
+
+        </script>
+      
+
+  </body>
+</html>

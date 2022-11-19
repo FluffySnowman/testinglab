@@ -1,0 +1,10 @@
+{
+  "configurations": [
+    {
+      "type": "python",
+      "name": "python1",
+      "arguments": ["$PROJECT_DIR$/game2.py"],
+    },
+
+  ]
+}

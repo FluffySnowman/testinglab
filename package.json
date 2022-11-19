@@ -1,0 +1,27 @@
+{
+  "name": "testinglab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FluffySnowman/testinglab.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FluffySnowman/testinglab/issues"
+  },
+  "homepage": "https://github.com/FluffySnowman/testinglab#readme",
+  "dependencies": {
+    "apple-mapkit-js": "^6.1.0",
+    "google-search-results-nodejs": "^2.1.0",
+    "jimp": "^0.16.2",
+    "ronin-mocks": "^0.1.11",
+    "ronin-server": "^0.1.3"
+  }
+}
