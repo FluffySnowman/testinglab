@@ -2,7 +2,10 @@ import phonenumbers
 from phonenumbers import timezone
 from phonenumbers import carrier
 
-phone_number = phonenumbers.parse("+441234567890")
+phone_number = input("Enter phone number: ")
+
+ro_number = phonenumbers.parse(phone_number)
+print(carrier.name_for_number(ro_number, "en"))
 
 """ print("Country code:", phone_number.country_code)
 print("National number:", phone_number.national_number)
@@ -14,6 +17,5 @@ else:
 
 """
 
-print(timezone.time_zones_for_number(phone_number))
-print(carrier.name_for_number(phone_number, "en"))
+print(timezone.time_zones_for_number(ro_number))
 
